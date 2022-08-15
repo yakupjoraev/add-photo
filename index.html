@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Photo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="main__body">
+  <!-- Header -->
+  <header>
+    <nav>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo"> <a href="#"><svg width="113" height="36" viewBox="0 0 113 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M31.5003 25.5586C31.5003 28.4457 30.539 30.864 28.6164 32.8136C26.6959 34.7627 24.307 35.7375 21.4498 35.7381H13.0282V21.9241H18.4641V30.7054H21.4498C22.8888 30.7054 24.0612 30.2347 24.9672 29.2933C25.8745 28.3552 26.3275 27.1103 26.3262 25.5586C26.3262 24.0069 25.8732 22.7607 24.9672 21.8199C24.0619 20.8799 22.8894 20.4099 21.4498 20.4098H10.0424C8.44527 20.4331 6.86591 20.0776 5.43784 19.3734C5.34589 19.3282 5.25395 19.279 5.16404 19.2298C4.31804 18.7634 3.54691 18.1762 2.87577 17.4874C1.05359 15.654 0.0230427 13.1979 0 10.6335L0 9.84478C0.0799666 7.12486 1.03858 4.83435 2.87585 2.97327C4.79637 1.02433 7.18523 0.0495144 10.0424 0.0488281H18.4641V13.8648H13.0282V5.08157H10.0424C8.60351 5.08157 7.43107 5.5516 6.52511 6.49167C5.61779 7.43179 5.16412 8.67735 5.16412 10.2284C5.16412 11.782 5.61779 13.0282 6.52511 13.967C7.4304 14.9071 8.60284 15.3778 10.0424 15.3791H21.4498C24.3077 15.3791 26.6965 16.3526 28.6164 18.2996C30.539 20.2486 31.5003 22.6683 31.5003 25.5586Z" fill="#4A4A4A"/>
+                  <path d="M51.0401 0H46.1815L41.0332 15.3526H45.3569L46.0255 13.1373H51.2183L51.887 15.3526H56.1885L51.0401 0ZM47.0507 9.75991L48.6108 4.54005L50.1932 9.75991H47.0507Z" fill="#8506A9"/>
+                  <path d="M63.678 1.28116e-08H57.3262V10.1923H61.427V3.79429H63.678C64.1714 3.77703 64.6629 3.86291 65.12 4.04628C65.5772 4.22965 65.9896 4.50633 66.3302 4.85806C67.0134 5.56734 67.3551 6.50675 67.3554 7.67629C67.3554 8.84615 67.0136 9.78556 66.3302 10.4945C65.9897 10.8463 65.5772 11.123 65.1201 11.3064C64.6629 11.4897 64.1714 11.5756 63.678 11.5583H57.3262V15.3526H63.678C65.8321 15.3526 67.6336 14.6178 69.0825 13.1484C70.5314 11.6789 71.2558 9.85485 71.2555 7.67629C71.2555 5.49784 70.5312 3.67381 69.0825 2.20422C67.6338 0.734628 65.8324 -0.000112027 63.678 1.28116e-08Z" fill="#8506A9"/>
+                  <path d="M79.4554 1.28116e-08H73.1035V3.79429H79.4554C79.9487 3.77703 80.4402 3.86291 80.8974 4.04628C81.3545 4.22964 81.767 4.50632 82.1075 4.85806C82.7907 5.5674 83.1324 6.50681 83.1327 7.67629C83.1327 8.84615 82.791 9.78556 82.1075 10.4945C81.767 10.8463 81.3546 11.123 80.8974 11.3064C80.4402 11.4897 79.9487 11.5756 79.4554 11.5583H77.2043V5.16032H73.1035V15.3526H79.4554C81.6094 15.3526 83.4109 14.6178 84.8598 13.1484C86.3087 11.6789 87.0331 9.85485 87.0328 7.67629C87.0328 5.49784 86.3085 3.67381 84.8598 2.20422C83.4111 0.734628 81.6097 -0.000112027 79.4554 1.28116e-08Z" fill="#8506A9"/>
+                  <path d="M47.0952 20.3183C47.8254 20.2993 48.5521 20.4234 49.2331 20.6832C49.9142 20.9429 50.536 21.3333 51.0625 21.8316C52.1321 22.8407 52.667 24.1274 52.6671 25.6919C52.6671 27.2566 52.1322 28.5433 51.0625 29.5518C50.5361 30.0502 49.9143 30.4406 49.2332 30.7004C48.5521 30.9602 47.8254 31.0842 47.0952 31.0651H45.0224V35.6711H41.0332V20.3183H47.0952ZM47.0952 27.3367C47.305 27.3411 47.5135 27.3024 47.7073 27.2231C47.9011 27.1438 48.0759 27.0256 48.2207 26.876C48.3736 26.7188 48.4928 26.533 48.5714 26.3296C48.6499 26.1262 48.6861 25.9093 48.6778 25.6919C48.6868 25.476 48.6509 25.2605 48.5723 25.0588C48.4937 24.857 48.374 24.6732 48.2207 24.5185C48.0742 24.3719 47.8988 24.2563 47.7053 24.1789C47.5117 24.1016 47.3041 24.064 47.0952 24.0686H45.0224V27.3367H47.0952Z" fill="#B1B1B1"/>
+                  <path d="M62.6086 20.3184H66.5756V35.6712H62.6086V29.7715H58.2178V35.6712H54.2285V20.3184H58.2178V25.9988H62.6086V20.3184Z" fill="#B1B1B1"/>
+                  <path d="M82.4324 33.6871C80.8759 35.171 78.7938 36.0007 76.6266 36.0007C74.4595 36.0007 72.3773 35.171 70.8208 33.6871C70.0487 32.95 69.4395 32.0641 69.031 31.0848C68.6226 30.1055 68.4239 29.0538 68.4471 27.9955C68.4239 26.9372 68.6227 25.8855 69.0311 24.9062C69.4395 23.9269 70.0488 23.041 70.8208 22.3039C72.3773 20.82 74.4595 19.9902 76.6266 19.9902C78.7938 19.9902 80.8759 20.82 82.4324 22.3039C83.2044 23.0411 83.8136 23.927 84.222 24.9063C84.6304 25.8856 84.8292 26.9372 84.806 27.9955C84.8293 29.0538 84.6305 30.1055 84.2221 31.0848C83.8137 32.0641 83.2044 32.95 82.4324 33.6871ZM73.6177 30.9894C74.3258 31.7321 75.2748 32.2085 76.3015 32.3366C77.3281 32.4647 78.368 32.2364 79.2419 31.6911C80.1159 31.1457 80.7692 30.3175 81.0893 29.3491C81.4094 28.3807 81.3762 27.3327 80.9955 26.3857C80.6148 25.4388 79.9104 24.6521 79.0037 24.1614C78.0969 23.6706 77.0446 23.5064 76.0281 23.6971C75.0116 23.8878 74.0944 24.4214 73.4348 25.206C72.7751 25.9907 72.4141 26.9771 72.4141 27.9955C72.3953 28.5491 72.4925 29.1006 72.6995 29.6156C72.9066 30.1307 73.2191 30.5983 73.6177 30.9894Z" fill="#B1B1B1"/>
+                  <path d="M96.5741 20.3184V24.1126H92.7182V35.6712H88.7289V24.1126H84.873V20.3184H96.5741Z" fill="#B1B1B1"/>
+                  <path d="M110.626 33.6871C109.069 35.171 106.987 36.0007 104.82 36.0007C102.653 36.0007 100.571 35.171 99.0142 33.6871C98.2421 32.95 97.6328 32.0641 97.2244 31.0848C96.816 30.1055 96.6172 29.0538 96.6405 27.9955C96.6173 26.9372 96.8161 25.8855 97.2245 24.9062C97.6329 23.9269 98.2421 23.041 99.0141 22.3039C100.571 20.82 102.653 19.9902 104.82 19.9902C106.987 19.9902 109.069 20.82 110.626 22.3039C111.398 23.0411 112.007 23.927 112.415 24.9063C112.824 25.8856 113.023 26.9372 112.999 27.9955C113.023 29.0538 112.824 30.1055 112.415 31.0848C112.007 32.0641 111.398 32.95 110.626 33.6871ZM101.811 30.9894C102.519 31.7321 103.468 32.2085 104.495 32.3366C105.521 32.4647 106.561 32.2364 107.435 31.6911C108.309 31.1457 108.963 30.3175 109.283 29.3491C109.603 28.3807 109.57 27.3327 109.189 26.3857C108.808 25.4388 108.104 24.6521 107.197 24.1614C106.29 23.6706 105.238 23.5064 104.221 23.6971C103.205 23.8878 102.288 24.4214 101.628 25.206C100.968 25.9907 100.607 26.9771 100.607 27.9955C100.589 28.5491 100.686 29.1006 100.893 29.6156C101.1 30.1307 101.413 30.5983 101.811 30.9894Z" fill="#B1B1B1"/>
+                  </svg>
+                   </a> 
+                  </div>
+                <ul class="menu">
+                    <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Портфолио</a></li>
+                    <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Виды работ</a></li>
+                    <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>О фотостудии</a></li>
+                    <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Услуги и цены</a></li>
+                    <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Контакты</a></li>
+                </ul>
+                <div class="burger">
+                    <span></span>
+                </div>
+                <div class="call">
+                  <a class="call__outline-btn" href="">ОБРАТНЫЙ ЗВОНОК</a>
+                  <a class="call__phone" href="tel:+74993446091">+7 (499) 344 60 91</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+  <!-- Main Page -->
+  <main>
+    <section class="section__hero">
+  <div class="container">
+    <div class="hero__inner">
+
+      <h1 class="hero__title">
+        Профессиональная фотосессия в студии
+      </h1>
+      <div class="hero__subtitle">
+        <p>Наша фотостудия позволит исполнить ваши мечты</p>
+      </div>
+      <div class="hero__text">
+        <p>
+          Фотографии стали неотъемлемой частью нашей жизни. Это теперь не просто памятные снимки в альбомах, ныне фото
+          становиться способом понравиться окружающим, получить восхищение, заявить о себе всему миру.
+          Выбор правильной фотостудии занимает далеко не последнее место в получение фотографий. И мы с точностью
+          заявляем, что нашей фотостудией вы останетесь довольны
+          и еще не раз захотите возвращаться к нам.
+        </p>
+      </div>
+
+
+      <!-- Modal -->
+      <div class="modal__wrapper">
+        <div class="modal">
+          <div class="modal__close"> <img src="./img/cancel.svg" alt="cancel" width="10px" height="10px"></div>
+          <div class="modal__title"><span>Форма обратной связи</span> </div>
+          <div class="modal__body">
+            <div class="modal__img">
+              <img src="img/form-bg.png" alt="form backgraund">
+            </div>
+            <form class="modal__form" action="#">
+              <div class="form__col">
+                <label class="form__label" for="text">Имя</label>
+                <input autocomplete="off" type="text" id="text" placeholder="Введите ваше имя" class="form__input">
+              </div>
+              <div class="form__col">
+                <label class="form__label" for="email">E-mail</label>
+                <input autocomplete="off" type="email" id="email" placeholder="Введите ваш E-mail" class="form__input">
+              </div>
+              <div class="form__col">
+                <label class="form__label" for="tel">Телефон</label>
+                <input autocomplete="off" type="tel" id="tel" placeholder="Введите ваше Телефон" class="form__input">
+              </div>
+              <button type="submit" class="form__button">Отправить</button>
+              <div class="form__text">
+                <p>Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных и соглашаетесь с <a href="http://" target="_blank" rel="noopener noreferrer">политикой конфиденциальности</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="btn modal__btn">Получить консультацию</a>
+
+
+
+    </div>
+  </div>
+</section>
+    <section class="section__works">
+  <div class="works__inner">
+    <h3 class="works__title title">
+      Наши работы
+    </h3>
+   
+    <div class="gallery swiper-container">
+      <div class="gallery__list swiper-wrapper">
+        <div class="gallery__item swiper-slide">
+          <a data-fslightbox="first-lightbox" href="img/works1.jpg">
+              <img src="img/works1.jpg" alt="images from work">
+          </a>
+        </div>
+        <div class="gallery__item swiper-slide">
+          <a data-fslightbox="first-lightbox" href="img/works2.jpg">
+            <img src="img/works2.jpg" alt="images from work">
+        </a>
+        </div>
+        <div class="gallery__item swiper-slide">
+          <a data-fslightbox="first-lightbox"  href="img/works3.jpg">
+            <img src="img/works3.jpg" alt="images from work">
+        </a>
+        </div>
+        <div class="gallery__item swiper-slide">
+          <a data-fslightbox="first-lightbox"  href="img/works1.jpg">
+            <img src="img/works1.jpg" alt="images from work">
+        </a>
+        </div>
+        <div class="gallery__item swiper-slide">
+          <a data-fslightbox="first-lightbox"  href="img/works2.jpg">
+            <img src="img/works2.jpg" alt="images from work">
+        </a>
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+
+
+
+  </div>
+</section>
+    <section class="section__location">
+  <div class="container">
+    <div class="location__inner">
+      <h3 class="location__title title">
+        Наши локации
+      </h3>
+      <div class="location__images">
+        <div class="location__image">
+          <figure>
+            <a data-fslightbox="second-lightbox" href="img/location1.jpg"><img src="img/location1.jpg"
+                alt="Location one"></a>
+            <figcaption>
+              <p>Location one</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="location__image">
+          <figure>
+            <a data-fslightbox="second-lightbox" href="img/location2.jpg"><img src="img/location2.jpg"
+                alt="Location two"></a>
+            <figcaption>
+              <p>Location two</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="location__image">
+          <figure>
+            <a data-fslightbox="second-lightbox" href="img/location3.jpg"><img src="img/location3.jpg"
+                alt="Location three"></a>
+            <figcaption>
+              <p>Location three</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal__wrapper-location">
+        <div class="modal">
+          <div class="modal__close-location"> <img src="./img/cancel.svg" alt="cancel" width="10px" height="10px"></div>
+          <div class="modal__title"><span>Форма выбора локации</span> </div>
+          <div class="modal__body">
+            <div class="modal__img">
+              <img src="img/location-form.png" alt="form backgraund">
+            </div>
+            <form class="modal__form" action="#">
+              <div class="form__col">
+                <label class="form__label" for="text2">Имя</label>
+                <input autocomplete="off" type="text" id="text2" placeholder="Введите ваше имя" class="form__input">
+              </div>
+              <div class="form__col">
+                <label class="form__label" for="email2">E-mail</label>
+                <input autocomplete="off" type="email" id="email2" placeholder="Введите ваш E-mail" class="form__input">
+              </div>
+              <div class="form__col">
+                <label class="form__label" for="tel2">Телефон</label>
+                <input autocomplete="off" type="tel" id="tel2" placeholder="Введите ваше Телефон" class="form__input">
+              </div>
+              <p class="select__text form__label">
+                  Локации
+                </p>
+              <div class="form__col" id="select">
+                <input type="hidden" class="hidden__input form__input" id="select__form">
+              </div>
+              <button type="submit" class="form__button">Отправить</button>
+              <div class="form__text">
+                <p>Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных и соглашаетесь с <a
+                    href="http://" target="_blank" rel="noopener noreferrer">политикой конфиденциальности</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="location__btn btn modal__btn-location">выбрать локацию </a>
+
+
+    </div>
+  </div>
+</section>
+    <section class="section__registration">
+  <div class="registration__inner">
+    <h3 class="registration__title title">
+      Оформление фотостудии
+    </h3>
+    <div class="registration__video-popup">
+      <a class="registration__video-link" data-fslightbox="gallery" href="https://www.youtube.com/watch?v=MmxK9XrbAlk"><img
+          src="img/registration__play.svg" alt="registration__play"></a>
+    </div>
+  </div>
+</section>
+    <section class="section__services">
+  <div class="container">
+    <div class="services__inner">
+    <h3 class="services__title title">
+      Виды услуг
+    </h3>
+    <div class="services__items">
+      <div class="services__body">
+        <div class="services__item">
+          <figure>
+            <img src="img/services1.jpg"
+                alt="Фотосессия Лав Стори">
+            <figcaption>
+              <p>Фотосессия Лав Стори</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="services__item">
+          <figure>
+            <img src="img/services2.jpg"
+                alt="Фотосессия для подростков">
+            <figcaption>
+              <p>Фотосессия для подростков</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="services__item">
+          <figure>
+            <img src="img/services3.jpg"
+                alt="Парная фотосессия">
+            <figcaption>
+              <p>Парная фотосессия</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="services__item">
+          <figure>
+            <img src="img/services4.jpg"
+                alt="Фотосессия для парней">
+            <figcaption>
+              <p>Фотосессия для парней</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="services__item">
+          <figure>
+            <img src="img/services5.jpg"
+                alt="Семейная фотосессия (дети +14)">
+            <figcaption>
+              <p>Семейная фотосессия (дети +14)</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="services__item">
+          <figure>
+            <img src="img/services6.jpg"
+                alt="Групповая фотосессия">
+            <figcaption>
+              <p>Групповая фотосессия</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="services__item">
+          <figure>
+            <img src="img/services7.jpg"
+                alt="Фотосессия Лукбук">
+            <figcaption>
+              <p>Фотосессия Лукбук</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="services__item">
+          <figure>
+            <img src="img/services8.jpg"
+                alt="Фотосессия для девушек">
+            <figcaption>
+              <p>Фотосессия для девушек</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="services__item">
+          <figure>
+            <img src="img/services9.jpg"
+                alt="Фотосессия для беременных">
+            <figcaption>
+              <p>Фотосессия для беременных</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="services__item">
+          <figure>
+            <img src="img/services10.jpg"
+                alt="Фотосессия с животными">
+            <figcaption>
+              <p>Фотосессия с животными</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="services__item">
+          <figure>
+            <img src="img/services11.jpg"
+                alt="Фотосессия «Деловой стиль»">
+            <figcaption>
+              <p>Фотосессия «Деловой стиль»</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+    <section class="section__ideas">
+  <div class="container">
+    <div class="ideas__inner">
+      <h3 class="ideas__title title">
+        Фотостудия для любых идейных фотоссесий
+      </h3>
+      <div class="ideas__text">
+        <p>
+          Воплотите мечту с нашей фотостудией и приобретите красивые, уникальные, качественные фотографии, выбрав один
+          из наших залов.
+        <p>А их, -на секундочку, -аж семь штук.</p>
+        <p>Каждый наш зал оборудован интерьером и профессиональным оборудованием, и подойдет для любой фотоссесии, а мы
+          хотим рассказать
+          вам о все подробнее.</p>
+        <p>Какие идеи можно воплотить?</p>
+        <p>• Фотоссесия Love Story</p>
+        <p> Мечтаете показать всему миру вашу историю создания любви или хранить снимки в памятном альбоме<span
+            class="dots">...</span>
+        <div class="more-text">, то это фотоссесия отлично подойдет вам. Расскажите вашу
+          историю с любимым человеком в фотографиях в необычном месте.</p>
+          <p> • Семейная фотоссесия</p>
+          <p>
+            Семья — это самое главное в жизни любого человека. Хотите повесить фотографии в вашем уютном доме, смотреть
+            на них и испытывать прилив нежности, значит семейная фотоссесия в нашей фотостудии станет отличным
+            вариантом.</p>
+          <p> • Фотоссесия для беременных девушек</p>
+          <p>Желаете сохранить воспоминания о прекрасном времени в жизни каждой женщины? Наши локации помогут вам
+            организовать и воссоздать
+            в фотографиях любовь матери и еще не родившегося ребенка.</p>
+          <p> • Фотоссесия «Деловой стиль».</p>
+          <p>Вы не из тех, кто любит яркие чувства, эмоции и считаете себя сдержанным. Вам нужны фотографии, где вы
+            раскроетесь как профессионал, произведете впечатление как деловой человек. Эта фотоссесия станет вашим
+            правильным решением.</p>
+          <p>• Фотоссесия для девушек и парней.</p>
+          <p>Хочешь стать кем-то другим? Или, наоборот, показать свое «я»? Фотоссесия для девушек или парней поможет
+            воплотить любые идеи.</p>
+          <p>Помимо вышеперечисленного есть и другие стили фотоссесий. Вы самостоятельно выбираете, а наши фотозалы
+            помогают вам и вдохновляют.</p>
+          <p> Кстати, о них…</p>
+          <p> Все семь фото локаций уникальные в своем роде. Мы пытались воссоздать непохожесть на другие фотостудии не
+            только в городе, но и во всей стране. Каждый зал отличается от других по дизайнерскому решению и интерьеру.
+            И каждый зал пропитан своим духом, стилем и видится
+            для каждого нашего посетителя по-разному.
+            Светлые помещения помогут получить более качественные, яркие фотоснимки. Трендовая мебель и другие предметы
+            интерьера можно двигать и активно использовать в фотосъемках. Локации подойдут для любых людей и задач:
+            блогеров и медийных личностей, обычных
+            и счастливых семей, предпринимателей и подростков.
+            Что еще нужно знать о нас?</p>
+          <p>Оборудование. Неотъемлемая часть любой фотостудии и нередко владельцы фотостудий экономят на этой важной
+            части.
+            Мы используем все оборудование только от профессиональных продавцов, которые уже не один год предлагают свои
+            товары на мировом рынке. Вы найдете все что нужно и необходимо для работы фотографов, для создания образов и
+            света. Ведь именно от оборудования часто зависит качество получающихся фотоснимков.
+        </div>
+        </p>
+        <button class="more-text-btn">Подробнее <svg width="25" height="14" viewBox="0 0 25 14" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M23 2L13.2338 11.6984C12.8288 12.1005 12.1721 12.1005 11.7671 11.6984L2 2" stroke="#8506A9"
+              stroke-width="3" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="section__price">
+  <div class="container">
+    <div class="price__inner">
+      <h3 class="price__title title">
+        Стоимость фотосесии
+      </h3>
+      <div class="price__items">
+        <div class="price__items-body price__items-body--mini">
+          <ul class="price__list">
+            <li class="price__item price__item-title">MINI</li>
+            <li class="price__item price__item-price">2500 ₽</li>
+            <li class="price__item price__item-location">/ 1 локация</li>
+            <li class="price__item price__item-check">Длительность — 30 минут</li>
+            <li class="price__item price__item-check">Исходники — До 100 штук</li>
+            <li class="price__item price__item-check">Ретушь — 4 фото</li>
+            <li class="price__item price__item-check">Аренда фотостудии — Бесплатно</li>
+            <li class="price__item price__item-check">Любой образ</li>
+          </ul>
+          <ul class="add__list">
+            <li class="add__item"><span>Дополнительные услуги</span></li>
+            <li class="add__item">Помощь<br>
+              в позировании</li>
+            <li class="add__item">Визажист<br>
+              + 2000 ₽</li>
+            <li class="add__item">Дополнительная ретушь<br> фото — 1 шт. / 250 ₽</li>
+          </ul>
+          <button class="price__btn" type="submit">Забронировать</button>
+        </div>
+        <div class="price__items-body price__items-body--standart">
+          <ul class="price__list">
+            <li class="price__item price__item-title">STANDART</li>
+            <li class="price__item price__item-price">5000 ₽</li>
+            <li class="price__item price__item-location">/ 2 локации </li>
+            <li class="price__item price__item-check">Длительность — 1 час 20 минут </li>
+            <li class="price__item price__item-check">Исходники — До 200 штук</li>
+            <li class="price__item price__item-check">Ретушь — 8 фото</li>
+            <li class="price__item price__item-check">Аренда фотостудии — Бесплатно</li>
+            <li class="price__item price__item-check">Любой образ</li>
+          </ul>
+          <ul class="add__list">
+            <li class="add__item"><span>Дополнительные услуги</span></li>
+            <li class="add__item">Помощь<br>
+              в позировании</li>
+            <li class="add__item">Визажист<br>
+              + 2000 ₽</li>
+            <li class="add__item">Дополнительная ретушь<br> фото — 1 шт. / 250 ₽</li>
+          </ul>
+          <button class="price__btn" type="submit">Забронировать</button>
+
+        </div>
+        <div class="price__items-body price__items-body--maxi">
+          <ul class="price__list">
+            <li class="price__item price__item-title">MAXI</li>
+            <li class="price__item price__item-price">N ₽</li>
+            <li class="price__item price__item-location">/ Максимальное количество локаций</li>
+            <li class="price__item price__item-check">Длительность — 4 часа</li>
+            <li class="price__item price__item-check">Исходники — До 500 штук</li>
+            <li class="price__item price__item-check">Ретушь — 50 фото</li>
+            <li class="price__item price__item-check">Аренда фотостудии — Бесплатно</li>
+            <li class="price__item price__item-check">Визажист — Make-Up, Укладка</li>
+            <li class="price__item price__item-check">Предварительный подбор образов — До 8 образов</li>
+          </ul>
+          <ul class="add__list">
+            <li class="add__item"><span>Дополнительные услуги</span></li>
+            <li class="add__item">Дополнительная ретушь<br> фото — 1 шт. / 250 ₽</li>
+          </ul>
+          <button class="price__btn" type="submit">Забронировать</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="section__certificate">
+  <div class="container">
+    <div class="certificate__inner">
+      <h3 class="certificate__title title">
+        Подарочный сертификат на фотосессию
+      </h3>
+      <div class="certificate__content">
+        <div class="certificate__body">
+          <div class="certificate__items">
+            <ul class="certificate__list">
+              <li class="certificate__item certificate__item-subtitle">СЕРТИФИКАТ НА ФОТОСЕССИЮ</li>
+              <li class="certificate__item certificate__item-title">Это подарок,
+                который западает
+                в душу</li>
+              <li class="certificate__item certificate__item--check"><svg width="24" height="24" viewBox="0 0 24 24"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M23.7599 3.71906L10.0799 17.5191L4.91992 12.3591L6.71992 10.6791L10.0799 14.0391L22.0799 2.03906L23.7599 3.71906Z"
+                    fill="#8506A9" />
+                  <path
+                    d="M23.04 7.92L21.36 9.6C21.6 10.32 21.72 11.16 21.72 12C21.72 17.52 17.28 21.84 11.88 21.84C6.36 21.84 2.04 17.4 2.04 12C2.04 6.48 6.48 2.16 11.88 2.16C13.8 2.16 15.72 2.76 17.28 3.72L18.84 2.16C16.92 0.840001 14.52 0 12 0C5.4 0 0 5.4 0 12C0 18.6 5.4 24 12 24C18.6 24 24 18.6 24 12C23.76 10.56 23.52 9.12 23.04 7.92Z"
+                    fill="#8506A9" />
+                </svg>
+                Креативное оформление</li>
+              <li class="certificate__item certificate__item--check"><svg width="24" height="24" viewBox="0 0 24 24"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M23.7599 3.71906L10.0799 17.5191L4.91992 12.3591L6.71992 10.6791L10.0799 14.0391L22.0799 2.03906L23.7599 3.71906Z"
+                    fill="#8506A9" />
+                  <path
+                    d="M23.04 7.92L21.36 9.6C21.6 10.32 21.72 11.16 21.72 12C21.72 17.52 17.28 21.84 11.88 21.84C6.36 21.84 2.04 17.4 2.04 12C2.04 6.48 6.48 2.16 11.88 2.16C13.8 2.16 15.72 2.76 17.28 3.72L18.84 2.16C16.92 0.840001 14.52 0 12 0C5.4 0 0 5.4 0 12C0 18.6 5.4 24 12 24C18.6 24 24 18.6 24 12C23.76 10.56 23.52 9.12 23.04 7.92Z"
+                    fill="#8506A9" />
+                </svg>
+                Открытый календарь</li>
+              <li class="certificate__item certificate__item--check"><svg width="24" height="24" viewBox="0 0 24 24"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M23.7599 3.71906L10.0799 17.5191L4.91992 12.3591L6.71992 10.6791L10.0799 14.0391L22.0799 2.03906L23.7599 3.71906Z"
+                    fill="#8506A9" />
+                  <path
+                    d="M23.04 7.92L21.36 9.6C21.6 10.32 21.72 11.16 21.72 12C21.72 17.52 17.28 21.84 11.88 21.84C6.36 21.84 2.04 17.4 2.04 12C2.04 6.48 6.48 2.16 11.88 2.16C13.8 2.16 15.72 2.76 17.28 3.72L18.84 2.16C16.92 0.840001 14.52 0 12 0C5.4 0 0 5.4 0 12C0 18.6 5.4 24 12 24C18.6 24 24 18.6 24 12C23.76 10.56 23.52 9.12 23.04 7.92Z"
+                    fill="#8506A9" />
+                </svg>
+                Всё включено</li>
+            </ul>
+          </div>
+          <div class="certificate__get">
+            <div class="certificate__img">
+              <img src="img/get.png" alt="get photo">
+            </div>
+            <div class="certificate__text">
+              <p>
+                Срок действия сертификата: 2 месяца
+                со дня приобретения.
+              </p>
+            </div>
+            <!-- Modal -->
+            <div class="modal__wrapper-certificate">
+              <div class="modal">
+                <div class="modal__close-certificate"> <img src="./img/cancel.svg" alt="cancel" width="10px" height="10px"></div>
+                <div class="modal__title"><span>Форма обратной связи</span> </div>
+                <div class="modal__body">
+                  <div class="modal__img">
+                    <img src="img/form-bg.png" alt="form backgraund">
+                  </div>
+                  <form class="modal__form" action="#">
+                    <div class="form__col">
+                      <label class="form__label" for="text2">Имя</label>
+                      <input autocomplete="off" type="text" id="text2" placeholder="Введите ваше имя"
+                        class="form__input">
+                    </div>
+                    <div class="form__col">
+                      <label class="form__label" for="email2">E-mail</label>
+                      <input autocomplete="off" type="email" id="email2" placeholder="Введите ваш E-mail"
+                        class="form__input">
+                    </div>
+                    <div class="form__col">
+                      <label class="form__label" for="tel2">Телефон</label>
+                      <input autocomplete="off" type="tel" id="tel2" placeholder="Введите ваше Телефон"
+                        class="form__input">
+                    </div>
+                    <button type="submit" class="form__button">Отправить</button>
+                    <div class="form__text">
+                      <p>Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных и соглашаетесь с
+                        <a href="http://" target="_blank" rel="noopener noreferrer">политикой конфиденциальности</a>
+                      </p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="certificate__btn btn modal__btn-certificate">Приобрести</a>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="section__form">
+  <div class="container">
+    <div class="form__inner">
+      <div class="form__img">
+        <img src="img/map.png" alt="map to add photo">
+      </div>
+      <div class="form__body">
+        <form class="form" action="#">
+          <h3 class="form__title title">
+            Форма обратной связи
+          </h3>
+          <div class="form__col form__col--form">
+            <label class="form__label form__label--form" for="text3">Имя</label>
+            <input autocomplete="off" type="text" id="text3" placeholder="Введите ваше имя" class="form__input form__input--form">
+          </div>
+          <div class="form__col form__col--form">
+            <label class="form__label form__label--form" for="email3">E-mail</label>
+            <input autocomplete="off" type="email" id="email3" placeholder="Введите ваш E-mail" class="form__input form__input--form">
+          </div>
+          <div class="form__col form__col--form">
+            <label class="form__label form__label--form" for="tel3">Телефон</label>
+            <input autocomplete="off" type="tel" id="tel3" placeholder="Введите ваше Телефон" class="form__input form__input--form">
+          </div>
+          <button type="submit" class="form__button form__button--form">Отправить</button>
+          <div class="form__text">
+            <p>Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных и соглашаетесь с <a
+                href="http://" target="_blank" rel="noopener noreferrer">политикой конфиденциальности</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__nav">
+        <div class="footer__logo">
+          <a class="logo__link" href=""><svg width="212" height="55" viewBox="0 0 212 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M48.6464 39.0532C48.6464 43.4493 47.1633 47.1716 44.1971 50.1238C41.2308 53.108 37.5395 54.5841 33.1231 54.5841H20.1046V33.4698H28.5089V46.8828H33.1231C35.3313 46.8828 37.144 46.1769 38.5612 44.7329C39.9784 43.2889 40.6705 41.3957 40.6705 39.0211C40.6705 36.6465 39.9784 34.7533 38.5612 33.3093C37.1769 31.8653 35.3642 31.1594 33.1231 31.1594H15.4904C12.8537 31.1594 10.4807 30.6459 8.3714 29.587C8.23957 29.5228 8.07478 29.4587 7.94295 29.3624C6.65757 28.6885 5.50403 27.7901 4.41641 26.699C3.65837 25.961 3.03216 25.1588 2.47187 24.3245C0.922832 21.982 0.0988748 19.2866 0 16.2381V15.0188C0.131833 10.8793 1.61496 7.38165 4.44937 4.55785C7.41561 1.5736 11.1069 0.0654297 15.4904 0.0654297H28.5089V21.1798H20.1046V7.76671H15.4904C13.2822 7.76671 11.4695 8.47266 10.0523 9.91666C8.63507 11.3606 7.94295 13.2539 7.94295 15.6284C7.94295 18.003 8.63507 19.8962 10.0523 21.3402C11.4365 22.7842 13.2492 23.4902 15.4904 23.4902H33.0901C37.5065 23.4902 41.1979 24.9662 44.1641 27.9505C47.1633 30.9347 48.6464 34.6249 48.6464 39.0532Z" fill="#4A4A4A"/>
+            <g clip-path="url(#clip0_5_2120)">
+            <path d="M47.6685 39.0485C47.6685 43.4593 46.2139 47.1539 43.3045 50.1326C40.3982 53.1102 36.7832 54.5996 32.4595 54.6005H19.7152V33.4958H27.9412V46.9117H32.4595C34.637 46.9117 36.4112 46.1925 37.7822 44.7543C39.1552 43.3211 39.8407 41.4191 39.8387 39.0485C39.8387 36.6778 39.1532 34.7738 37.7822 33.3366C36.4122 31.9004 34.638 31.1823 32.4595 31.1823H15.1969C12.78 31.2178 10.39 30.6747 8.22894 29.5988C8.0898 29.5297 7.95067 29.4546 7.8146 29.3795C6.53438 28.6669 5.36745 27.7698 4.35182 26.7174C1.59438 23.9165 0.0348699 20.1641 0 16.2463L0 15.0412C0.121011 10.8858 1.57166 7.38641 4.35195 4.54309C7.25823 1.56554 10.8732 0.0762437 15.1969 0.0751953H27.9412V21.1829H19.7152V7.7641H15.1969C13.0195 7.7641 11.2453 8.48221 9.87429 9.91842C8.50125 11.3547 7.81473 13.2577 7.81473 15.6273C7.81473 18.0009 8.50125 19.9048 9.87429 21.339C11.2442 22.7753 13.0185 23.4945 15.1969 23.4964H32.4595C36.7842 23.4964 40.3992 24.9837 43.3045 27.9584C46.2139 30.936 47.6685 34.6327 47.6685 39.0485Z" fill="#4A4A4A"/>
+            <path d="M77.2389 0H69.8865L62.0957 23.4553H68.6387L69.6504 20.0709H77.5086L78.5205 23.4553H85.0298L77.2389 0ZM71.2019 14.911L73.5627 6.93619L75.9573 14.911H71.2019Z" fill="#8506A9"/>
+            <path d="M96.3611 1.95732e-08H86.749V15.5715H92.9547V5.79683H96.3611C97.1077 5.77046 97.8515 5.90167 98.5433 6.18182C99.2351 6.46196 99.8592 6.88466 100.375 7.42204C101.408 8.50566 101.926 9.94087 101.926 11.7277C101.926 13.5149 101.409 14.9502 100.375 16.0333C99.8593 16.5707 99.2352 16.9935 98.5433 17.2736C97.8515 17.5538 97.1077 17.6849 96.3611 17.6585H86.749V23.4553H96.3611C99.6208 23.4553 102.347 22.3328 104.54 20.0878C106.732 17.8427 107.828 15.056 107.828 11.7277C107.828 8.39947 106.732 5.61277 104.54 3.36756C102.347 1.12235 99.6212 -0.000171152 96.3611 1.95732e-08Z" fill="#8506A9"/>
+            <path d="M120.239 1.95732e-08H110.627V5.79683H120.239C120.986 5.77046 121.729 5.90167 122.421 6.18181C123.113 6.46196 123.737 6.88466 124.252 7.42204C125.286 8.50575 125.803 9.94096 125.804 11.7277C125.804 13.5149 125.287 14.9502 124.252 16.0333C123.737 16.5707 123.113 16.9935 122.421 17.2736C121.729 17.5538 120.986 17.6849 120.239 17.6585H116.833V7.88382H110.627V23.4553H120.239C123.499 23.4553 126.225 22.3328 128.417 20.0878C130.61 17.8427 131.706 15.056 131.706 11.7277C131.706 8.39947 130.61 5.61277 128.417 3.36756C126.225 1.12235 123.499 -0.000171152 120.239 1.95732e-08Z" fill="#8506A9"/>
+            <path d="M71.2691 31.0419C72.3741 31.013 73.4738 31.2025 74.5045 31.5994C75.5351 31.9963 76.4761 32.5927 77.2727 33.3539C78.8914 34.8956 79.7008 36.8615 79.701 39.2516C79.701 41.6422 78.8916 43.6079 77.2727 45.1487C76.4761 45.9101 75.5352 46.5066 74.5045 46.9035C73.4739 47.3004 72.3741 47.4898 71.2691 47.4607H68.1324V54.4976H62.0957V31.0419H71.2691ZM71.2691 41.7645C71.5867 41.7712 71.9021 41.7121 72.1954 41.5909C72.4886 41.4698 72.7533 41.2892 72.9723 41.0607C73.2037 40.8205 73.3842 40.5366 73.503 40.2259C73.6218 39.9151 73.6766 39.5838 73.6641 39.2516C73.6777 38.9217 73.6234 38.5926 73.5044 38.2844C73.3854 37.9761 73.2044 37.6953 72.9723 37.459C72.7507 37.2349 72.4853 37.0584 72.1923 36.9401C71.8994 36.8219 71.5852 36.7646 71.2691 36.7716H68.1324V41.7645H71.2691Z" fill="#B1B1B1"/>
+            <path d="M94.7429 31.042H100.746V54.4977H94.7429V45.4842H88.0983V54.4977H82.0615V31.042H88.0983V39.7204H94.7429V31.042Z" fill="#B1B1B1"/>
+            <path d="M124.743 51.4649C122.387 53.7319 119.236 54.9996 115.957 54.9996C112.677 54.9996 109.526 53.7319 107.171 51.4649C106.003 50.3387 105.081 48.9853 104.463 47.4891C103.844 45.993 103.544 44.3862 103.579 42.7693C103.544 41.1525 103.845 39.5457 104.463 38.0496C105.081 36.5534 106.003 35.2 107.171 34.0738C109.526 31.8067 112.677 30.5391 115.957 30.5391C119.236 30.5391 122.387 31.8067 124.743 34.0738C125.911 35.2001 126.833 36.5535 127.451 38.0497C128.069 39.5458 128.369 41.1525 128.334 42.7693C128.37 44.3862 128.069 45.9929 127.451 47.489C126.833 48.9852 125.911 50.3387 124.743 51.4649ZM111.403 47.3433C112.475 48.478 113.911 49.2059 115.465 49.4016C117.018 49.5973 118.592 49.2485 119.914 48.4153C121.237 47.5822 122.226 46.3168 122.71 44.8373C123.194 43.3578 123.144 41.7567 122.568 40.31C121.992 38.8632 120.926 37.6614 119.554 36.9116C118.182 36.1618 116.589 35.911 115.051 36.2023C113.513 36.4936 112.125 37.3089 111.127 38.5076C110.128 39.7064 109.582 41.2135 109.582 42.7693C109.554 43.6151 109.701 44.4576 110.014 45.2445C110.327 46.0314 110.8 46.7458 111.403 47.3433V47.3433Z" fill="#B1B1B1"/>
+            <path d="M146.142 31.042V36.8387H140.307V54.4977H134.271V36.8387H128.436V31.042H146.142Z" fill="#B1B1B1"/>
+            <path d="M167.409 51.4649C165.053 53.7319 161.902 54.9996 158.623 54.9996C155.343 54.9996 152.192 53.7319 149.837 51.4649C148.669 50.3387 147.747 48.9853 147.129 47.4891C146.511 45.993 146.21 44.3862 146.245 42.7693C146.21 41.1525 146.511 39.5458 147.129 38.0496C147.747 36.5534 148.669 35.2 149.837 34.0738C152.192 31.8067 155.343 30.5391 158.623 30.5391C161.902 30.5391 165.053 31.8067 167.408 34.0738C168.577 35.2001 169.499 36.5535 170.117 38.0497C170.735 39.5458 171.036 41.1525 171 42.7693C171.036 44.3862 170.735 45.9929 170.117 47.489C169.499 48.9852 168.577 50.3387 167.409 51.4649V51.4649ZM154.069 47.3433C155.141 48.478 156.577 49.2059 158.131 49.4016C159.684 49.5973 161.258 49.2485 162.58 48.4153C163.903 47.5822 164.892 46.3168 165.376 44.8373C165.86 43.3578 165.81 41.7567 165.234 40.31C164.658 38.8632 163.592 37.6614 162.22 36.9116C160.848 36.1618 159.255 35.911 157.717 36.2023C156.179 36.4936 154.791 37.3089 153.793 38.5076C152.794 39.7064 152.248 41.2135 152.248 42.7693C152.22 43.6151 152.367 44.4576 152.68 45.2445C152.993 46.0314 153.466 46.7458 154.069 47.3433V47.3433Z" fill="#B1B1B1"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_5_2120">
+            <rect width="171" height="55" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
+            </a>
+        </div>
+        <ul class="footer__list">
+          <li class="footer__item"><a class="footer__link" href="#">Портфолио</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">Виды работ</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">О фотостудии</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">Услуги и цены</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">Отзывы</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer__socials">
+        <div class="footer__text">
+          <p>Наши социцальные сети:</p>
+        </div>
+        <ul class="socials__list">
+          <li class="socials__item"><a class="socials__link" href="#"><svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M30.5026 5.34545C30.0985 4.32727 29.5657 3.46364 28.6932 2.6C27.8206 1.73636 26.9481 1.20909 25.9194 0.809091C24.9274 0.427273 23.7885 0.172727 22.1169 0.0909091C20.4453 0.0181818 19.9126 0 15.66 0C11.4075 0 10.8748 0.0181818 9.20313 0.0909091C7.54069 0.172727 6.40178 0.427273 5.40064 0.818182C4.37195 1.21818 3.49939 1.74545 2.62684 2.60909C1.75429 3.47273 1.22157 4.33636 0.817444 5.35455C0.431684 6.33636 0.17451 7.46364 0.0918476 9.10909C0.0183695 10.7636 0 11.2909 0 15.5C0 19.7091 0.0183695 20.2364 0.0918476 21.8909C0.17451 23.5455 0.431684 24.6727 0.826628 25.6545C1.23076 26.6727 1.76347 27.5364 2.63603 28.4C3.50858 29.2636 4.38113 29.7909 5.40982 30.1909C6.40178 30.5727 7.54069 30.8364 9.21231 30.9091C10.8839 30.9818 11.4167 31 15.6692 31C19.9217 31 20.4545 30.9818 22.1261 30.9091C23.7885 30.8364 24.9274 30.5727 25.9286 30.1909C26.9573 29.7909 27.8298 29.2636 28.7024 28.4C29.5749 27.5364 30.1076 26.6727 30.5118 25.6545C30.8975 24.6727 31.1639 23.5455 31.2374 21.8909C31.3108 20.2364 31.3292 19.7091 31.3292 15.5C31.3292 11.2909 31.3108 10.7636 31.2374 9.10909C31.1547 7.46364 30.8883 6.33636 30.5026 5.34545ZM15.66 23.4636C11.2146 23.4636 7.61417 19.9 7.61417 15.5C7.61417 11.1 11.2146 7.53636 15.66 7.53636C20.1054 7.53636 23.7059 11.1 23.7059 15.5C23.7059 19.9 20.1054 23.4636 15.66 23.4636ZM24.0273 9.09091C22.9895 9.09091 22.1445 8.25455 22.1445 7.22727C22.1445 6.2 22.9895 5.36364 24.0273 5.36364C25.0652 5.36364 25.9102 6.2 25.9102 7.22727C25.901 8.25455 25.0652 9.09091 24.0273 9.09091ZM20.8861 15.5C20.8861 18.3545 18.5532 20.6636 15.6692 20.6636C12.7852 20.6636 10.4523 18.3545 10.4523 15.5C10.4523 12.6455 12.7852 10.3364 15.6692 10.3364C18.544 10.3364 20.8861 12.6455 20.8861 15.5Z" fill="#B1B1B1"/>
+            </svg>
+            </a></li>
+          <li class="socials__item"><a class="socials__link" href="#"><svg width="23" height="31" viewBox="0 0 23 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7844 8.16901V11.8004H21.8594L20.7281 17.4009H14.7844V31H6.81152V17.4009H0.329102V11.8004H6.81152V7.53538C6.81152 2.67758 10.6184 0 16.4543 0C19.2466 0 22.1646 0.381539 22.1646 0.381539V5.14396H18.9414C15.772 5.14396 14.7844 6.63605 14.7844 8.16901Z" fill="#B1B1B1"/>
+            </svg>
+            </a></li>
+          <li class="socials__item"><a class="socials__link" href="#"><svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M27.8068 5.1851C29.111 5.01446 30.3496 4.65309 31.4943 4.10102C30.631 5.47619 29.5426 6.69075 28.2853 7.66441C28.2947 7.95551 28.3041 8.25664 28.3041 8.55778C28.3041 17.6419 21.8393 28.1213 10.017 28.1213C6.38584 28.1213 3.00803 26.9871 0.165039 25.0297C0.671711 25.0899 1.17838 25.12 1.69444 25.12C4.70632 25.12 7.47425 24.0159 9.67921 22.179C6.86437 22.1188 4.49052 20.1313 3.67421 17.401C4.06829 17.4813 4.47175 17.5215 4.8846 17.5215C5.47571 17.5215 6.03868 17.4412 6.58289 17.2806C3.64607 16.6482 1.42234 13.8677 1.42234 10.5352C1.42234 10.5051 1.42234 10.475 1.42234 10.4449C2.28556 10.9568 3.28014 11.268 4.33101 11.3081C2.60457 10.0735 1.46925 7.96555 1.46925 5.58661C1.46925 4.33189 1.78827 3.14744 2.34185 2.13362C5.51324 6.29928 10.2516 9.02955 15.5904 9.32064C15.4778 8.81875 15.4215 8.29679 15.4215 7.75476C15.4215 3.96049 18.302 0.878906 21.8487 0.878906C23.6971 0.878906 25.3673 1.71204 26.5401 3.04706C28.0038 2.73589 29.3831 2.16374 30.6217 1.38079C30.1525 2.98683 29.1392 4.33189 27.8068 5.1851Z" fill="#B1B1B1"/>
+            </svg>
+            </a></li>
+          <li class="socials__item"><a class="socials__link" href="#"><svg width="34" height="27" viewBox="0 0 34 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M33.7065 2.53874C33.6236 3.63887 32.9398 7.48453 32.2663 11.6363L30.1422 23.9578C30.1422 23.9578 29.9764 25.7658 28.5258 26.0719C27.0856 26.3876 24.7024 24.9718 24.2776 24.6561C23.9357 24.417 17.9053 20.887 15.6984 19.1651C15.1078 18.6963 14.4239 17.7492 15.7813 16.6587C18.8379 14.0662 22.4955 10.8519 24.7024 8.81426C25.7179 7.87675 26.7436 5.67649 22.4955 8.3455L10.5176 15.7977C10.5176 15.7977 9.1603 16.5821 6.61139 15.8742C4.06248 15.1663 1.08875 14.2288 1.08875 14.2288C1.08875 14.2288 -0.95245 13.0522 2.52899 11.799L22.3297 4.27024C24.288 3.4858 30.9089 0.979418 30.9089 0.979418C30.9089 0.979418 33.9656 -0.120707 33.7065 2.53874Z" fill="#B1B1B1"/>
+            </svg>
+            </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="./js/scripts.min.js"></script>
+
+</html>
